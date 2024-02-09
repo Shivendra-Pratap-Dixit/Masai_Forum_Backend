@@ -3,7 +3,7 @@ const Joi = require('joi');
 
 
 const postSchema = new mongoose.Schema({
-    user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     title: { type: String, maxlength: 100, required: true },
     category: { type: String, enum: ['Development', 'Design', 'Innovation', 'Tutorial', 'Business'], required: true },
     content: { type: String, required: true },

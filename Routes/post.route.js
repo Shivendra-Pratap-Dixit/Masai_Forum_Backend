@@ -35,7 +35,7 @@ router.get('/posts/:post_id', async (req, res) => {
 });
 
 // POST a new post
-router.post('/posts', authMiddleware, async (req, res) => {
+router.post('/posts', async (req, res) => {
     try {
         const post = new Post(req.body);
         await post.save();
